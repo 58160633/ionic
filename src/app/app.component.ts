@@ -17,10 +17,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'รายการ',
-      url: '/list',
-      icon: 'list'
+      title: 'เกี่ยวกับเรา',
+      url: '/about',
+      icon: 'person'
     }
+   
   ];
 
   constructor(

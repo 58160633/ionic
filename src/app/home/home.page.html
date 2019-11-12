@@ -4,20 +4,24 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      สุขสันต์วันลอยกระทง
+      Smart City
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-card class="welcome-card">
+      
       <img *ngIf = "isShow" [src] = "titleImage.srcUrl" alt="" />
       <ion-card-header>
         <ion-card-subtitle>สวัสดี {{ title }}</ion-card-subtitle>
-        <ion-card-title>Welcome to TOT</ion-card-title>
+        <ion-card-title [ngStyle]="{color: color}">Welcome</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>........................</p>
+        <p class="title">โครงการพัฒนาเมืองอัจริยะ</p>
+        <p [ngClass]=" {title : isActive } ">
+          การใช้ ngclass 
+        </p>
 
         <ion-button expand="block" (click)="onClick()">
           Click me

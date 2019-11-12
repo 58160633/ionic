@@ -6,16 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  title = 'วันลอยกระทง';
+  title = 'Smart City';
   titleImage = {
-    srcUrl : "/assets/loy.jpg"
+    srcUrl : "/assets/b.png"
   };
 
   isShow = false;
   product = [
-    {name : 'กระทง1', price : '40'},
-    {name : 'กระทง2', price : '50'}
+    {name : 'Smart Envoriment', price : '40'},
+    {name : 'Smart Economy', price : '50'},
+    {name : 'Smart Mobility', price : '50'},
+    {name : 'Smart Energy', price : '50'},
+    {name : 'Smart People', price : '50'},
+    {name : 'Smart Living', price : '50'},
+    {name : 'Smart Governance', price : '50'}
   ];
+  color = '#3394FF';
+  isActive = false;
+  
+  
+  
 
   constructor() {}
   onClick(){
@@ -25,6 +35,8 @@ export class HomePage {
     //this.title = 'วันลอยกระทง new ';
     //this.isShow = true;
     this.isShow = !this.isShow;
+    this.color = '#BF33FF';
+    this.isActive = !this.isActive;
  
   }
 

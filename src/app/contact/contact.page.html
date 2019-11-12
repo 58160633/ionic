@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding">
+
+    <!-- <ion-card-title>Email: {{ email }}</ion-card-title> -->
+    <ion-text color="success" class="ion-text-center">
+      <h2>{{email}}</h2>
+
+      </ion-text>
+
+      <ion-text color="success" class="ion-text-center">
+          <h2>{{company?.name}}</h2>
+          </ion-text>
+      <ion-text color="danger" class="ion-text-center">
+          <h2>{{company?.province}}</h2>
+          </ion-text>
+
+    <ion-button expand="block" size="large" routerDirection="back" routerLink="/home">
+      ย้อนกลับ
+    </ion-button>
+</ion-content>

@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'about',loadChildren: './about/about.module#AboutPageModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
-  { path: 'product', loadChildren: './product/product.module#ProductPageModule' }
+  { path: 'product', loadChildren: './product/product.module#ProductPageModule' },
+  { path: 'detail', loadChildren: './detail/detail.module#DetailPageModule' }
 ];
 
 @NgModule({

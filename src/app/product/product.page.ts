@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,7 @@ import { DataService } from '../shared/data.service';
 export class ProductPage implements OnInit {
   product: any[];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private navCtrl: NavController) { }
 
   ngOnInit() {
     this.dataService.getProduct().subscribe(
@@ -18,6 +19,10 @@ export class ProductPage implements OnInit {
         console.log(this.product)
       }
     );
+  }
+  itemSelected(p:any) {
+    this.navCtrl.navigateForward(['/detail'],{state: {item:p} } );
+    console.log(p);
   }
 
 }

@@ -20,6 +20,11 @@ export class AppComponent {
       title: 'เกี่ยวกับเรา',
       url: '/about',
       icon: 'person'
+    },
+    {
+      title: 'Product',
+      url: '/product',
+      icon: 'cube'
     }
    
   ];

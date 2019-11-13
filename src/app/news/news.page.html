@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title *ngIf = "totalResults">
+        ข่าวสาร {{totalResults}} ข่าว
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content >
+
+
+<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="กำลังโหลดข้อมูล...">
+</ion-refresher-content>
+  </ion-refresher>
+
+
+
+
+<ion-card *ngFor="let a of articles">
+        <img src="{{a.urlToImage}}" *ngIf= "a.urlToImage">
+        <ion-card-header>
+          <ion-card-subtitle>{{a.source?.name}}</ion-card-subtitle>
+          <ion-card-title>{{a.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+         {{a.description}}
+        </ion-card-content>
+      </ion-card>
+
+      <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+
+      
+</ion-content>

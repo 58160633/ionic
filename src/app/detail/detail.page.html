@@ -6,7 +6,23 @@
    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-Details
+<ion-text *ngIf = "details?.length === 0" class = "ion-text-center" color="danger">
+  <h1>ไม่พบข้อมูลวีดีโอ</h1>
+</ion-text>
+<ion-list *ngIf = 'details?.length > 0'>
+      <ion-item *ngFor="let d of details">
+        <!-- <ion-thumbnail slot="start"> -->
+          <!-- <img src="{{d.picture}}" *ngIf="d.picture"> -->
+          <!-- </ion-thumbnail> -->
+        <ion-label>
+          <h3>
+           {{d.ch_title}}</h3>
+           <p>{{d.ch_dateadd}}</p>
+        </ion-label>
+        <ion-badge color = "danger" slot="end">
+           {{d.ch_view}}
+        </ion-badge>
+      </ion-item>
+    </ion-list>
 </ion-content>

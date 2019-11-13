@@ -16,10 +16,16 @@ export class ProductPage implements OnInit {
     this.dataService.getProduct().subscribe(
       (product:any)=>{
         this.product = product.data;
-        console.log(this.product)
       }
     );
   }
+
+
+
+
+
+
+
   itemSelected(p:any) {
     this.navCtrl.navigateForward(['/detail'],{state: {item:p} } );
     console.log(p);

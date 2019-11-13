@@ -25,7 +25,19 @@ export class AppComponent {
       title: 'Product',
       url: '/product',
       icon: 'cube'
+    },
+    {
+      title: 'News',
+      url: '/news',
+      icon: 'paper'
+
+    },
+    {
+      title: 'login',
+      url: '/login',
+      icon: 'paper'
     }
+
    
   ];
 

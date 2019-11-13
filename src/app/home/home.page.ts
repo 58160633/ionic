@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +28,7 @@ export class HomePage {
   
   
 
-  constructor() {}
+  constructor(private nav : NavController) {}
   onClick(){
     //alert('คลิกทำไม?');
     //console.log(`hi${this.title}`);
@@ -38,6 +39,10 @@ export class HomePage {
     this.color = '#BF33FF';
     this.isActive = !this.isActive;
  
+  }
+
+  openRegister(r:any){
+    this.nav.navigateForward('/register')
   }
 
 }
